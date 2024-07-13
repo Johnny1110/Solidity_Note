@@ -42,3 +42,9 @@
 <br>
 
 ## 目錄
+
+<br>
+
+### 基礎
+
+* [BitCoin blockchain 的 block 裡面長怎樣？](1_1/README.md)
