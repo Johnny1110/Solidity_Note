@@ -48,3 +48,7 @@
 ### 基礎
 
 * [BitCoin blockchain 的 block 裡面長怎樣？](1_1/README.md)
+
+* 共識算法，與挖礦
+    * [拜占庭問題與共識算法](1_2_1/README.md)
+    * [挖礦是什麼 ?](1_2_2/README.md)
