@@ -74,7 +74,7 @@ result = SHA-256(SHA-256(區塊頭部資料))
 bitcoin 挖礦流程圖如下（無窮迴圈）：
 
 
-![1](imgs/1.png)
+![2](imgs/2.png)
 
 <br>
 
