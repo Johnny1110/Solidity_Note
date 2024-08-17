@@ -52,3 +52,4 @@
 * 共識算法，與挖礦
     * [拜占庭問題與共識算法](1_2_1/README.md)
     * [挖礦是什麼 ?](1_2_2/README.md)
+    * [如何解決 Double Spending 問題 (UTXO，時間戳，分支)](1_2_3/README.MD)
