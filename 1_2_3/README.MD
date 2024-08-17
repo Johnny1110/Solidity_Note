@@ -1,4 +1,4 @@
-如何解決 Double Spending 問題 (UTXO，時間戳，分支)
+# 如何解決 Double Spending 問題 (UTXO，時間戳，分支)
 
 <br>
 
@@ -8,9 +8,9 @@
 
 ## Double Spending 是甚麼 ?
 
-在電子支付領域中，Double Spending 問題指的是同一筆資金被重複用於支付 2 次以上。
+在現有的電子支付技術領域中，有一個經典問題: __Double Spending__。
 
-來看看目前中心化電商平台如何解決 Double Spending
+Double Spending 問題指的是同一筆資金被重複用於支付 2 次以上。先來看看目前中心化電商平台如何解決 Double Spending。
 
 假設一個情境，一筆交易中共有 4 個角色參與其中:
 
@@ -23,10 +23,10 @@
 
 交易過程如下:
 
-1. 買家選擇商品並使用信用卡支付給電商平台保管。
+1. 買家選擇商品並使用信用卡支付台幣給電商平台。
 2. 電商平台把錢收到自己銀行帳戶中，並不會馬上支付給賣家，而是把錢暫時扣住。
-3. 買家隔了3天候收到賣家寄出的貨物後，確認沒問題，並通知電商平台已經收貨了。
-4. 電商平台將先前收到的帳款匯出給賣方。
+3. 買家隔了 3 天，收到賣家寄出的貨物後確認沒問題，通知電商平台已經收貨了。
+4. 電商平台將先前收到的帳款匯出給賣方銀行帳戶。
 
 <br>
 
@@ -48,20 +48,22 @@ __Bitcoin 系統解決 Double Spending 的 3 要素: UTXO,Timestamp, Fork__。
 
 <br>
 
-為了解決區塊了的 Double Spending 問題，中本聰為了 bitcoin 引入 UTXO (Unspent Transaction Output) 的概念，直譯成中文為 "未花費的交易輸出"。
+為了解決區塊了的 Double Spending 問題，中本聰為了 bitcoin 引入 UTXO (Unspent Transaction Output) 的概念，直譯成中文為 "未花費的交易輸出"，白話一點講就是 "電子紙鈔"。
 
-一般電子交易轉帳的作法就是銀行系統端的 A B 帳戶水位增減，A 匯款給 B 1000 塊做法如下:
+一般中心化網銀轉帳的作法就是銀行系統端的 A B 帳戶水位增減，A 匯款給 B 1000 塊做法如下:
 
 ```
-lock(A);
-lock(B);
+lock(A); // lock A's wallet
+lock(B); // lock B's wallet
 
-// throws exception if A sufficient not enough
+// throws exception if A's wallet sufficient not enough
 sufficientCheck(A, 1000); 
 
+// adjustment
 A = A - 1000;
 B = B + 1000;
 
+// save A, B wallet 
 save(A);
 save(B);
 ```
