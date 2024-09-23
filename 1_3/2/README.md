@@ -79,7 +79,7 @@ Asymmetric cryptography 非對稱密碼學
 
 <br>
 
-1. 選擇兩個主要的數字 p 與 q
+1. 選擇兩個主要的數字 p 與 q，__所選的 p 和 q 必須為質數__。
 
     ```
     p = 61
