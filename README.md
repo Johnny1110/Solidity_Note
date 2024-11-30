@@ -66,11 +66,8 @@
 * 以太坊區塊鏈：
     * [誕生與發展](2_1/README.md)
     * [資料結構](2_2/README.md)
-    * [搭建私有鏈](2_3/README.md)
-
-
-
-
+    * [Gas fee 與 ETH](2_3/README.md)
+    * [搭建私有鏈](2_4/README.md)
 
 <br>
 <br>
